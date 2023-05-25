@@ -5,6 +5,7 @@ const showMessage = document.getElementById('mostrar_mensaje');
 const cleanInput = document.getElementById('borrar');
 const copy = document.getElementById('copiar');
 const board = document.getElementById('mostrar_mensaje');
+const textarea = document.getElementById('mensaje');
 
 
 
@@ -90,3 +91,7 @@ copy.addEventListener('click', () => {
             alert('error al copiar el texto', error)
         });
 })
+
+textarea.addEventListener('blur', () => textarea.placeholder = 'Ingrese el texto a encriptar o desencriptar')
+
+textarea.addEventListener('focus', () => textarea.placeholder = '')
